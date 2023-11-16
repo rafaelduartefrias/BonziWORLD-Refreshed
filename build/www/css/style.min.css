@@ -137,6 +137,7 @@ input[type="text"] {
 
 .bubble-content {
   padding: 12px;
+  max-height: 175px;
   user-select: text;
   -webkit-user-select: text;
   overflow-x: hidden;
@@ -209,6 +210,9 @@ input[type="text"] {
   background: #ffffe1;
   font-size: 12px;
   color: #000; }
+
+.bubble_autowidth {
+  width: auto !important; max-height: null; height: auto !important; }
 
 .bubble_greentext {
   color: #789922; }
