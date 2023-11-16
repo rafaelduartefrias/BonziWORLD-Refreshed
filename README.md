@@ -1,8 +1,10 @@
-# BonziWORLD 2: Remaked
+# BonziWORLD 2: Remaked (alternatively BonziWORLD 2 Revival)
 The BonziWORLD-Two.ga website has been discontinued because Seamus replaced it with his newer websites. This project is made as the only remake.
 All the source code for the server and client is publically available here. If you want to run BonziWORLD 2, by all means go ahead.
 Do whatever you'd like with this code.
 Just try to put me somewhere in the credits.
+
+To learn more about the most popular server, visit https://bonziworld.co.
 
 ## Dependencies
 - Node.js and npm
