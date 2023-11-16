@@ -203,13 +203,6 @@ let userCommands = {
             vid: vid
         });
     },
-    "youtube_legacy": function(vidRaw) {
-        var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
-        this.room.emit("youtube_legacy", {
-            guid: this.guid,
-            vid: vid
-        });
-    },
   css:function(...txt){
       this.room.emit('css',{
           guid:this.guid,
