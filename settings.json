@@ -111,7 +111,8 @@
     "emerald",
     "gold",
     "orange",
-    "yellow"
+    "yellow",
+    "magenta"
   ],
   "banLength": 1440,
   "port": 3000,
