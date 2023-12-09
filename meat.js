@@ -327,19 +327,11 @@ class User {
             sanitize: true,
             runlevel: 0
         };
-      if(Ban.isIn(this.getIp())) {       
-          this.public = {
-              color: 'pope',
-              hue:0
-          }
-          this.socket.emit('admin')
-      } else {
           this.public = {
               color: settings.bonziColors[Math.floor(
                   Math.random() * settings.bonziColors.length
               )]
           };
-      }
 
         log.access.log('info', 'connect', {
             guid: this.guid,
@@ -464,9 +456,6 @@ class User {
         this.socket.on('talk', this.talk.bind(this));
         this.socket.on('command', this.command.bind(this));
         this.socket.on('disconnect', this.disconnect.bind(this));
-      if (Ban.isIn(this.getIp())){
-          this.socket.emit('admin')
-      }
     }
 
     talk(data) {
