@@ -159,17 +159,10 @@ let userCommands = {
               if(n.guid==data){
                   target = n;
               }
-          })
-          if (target.socket.request.connection.remoteAddress == "::1"){
-              return
-          } else if (target.socket.request.connection.remoteAddress == "::ffff:127.0.0.1"){
-              return
-          } else if (target.socket.request.connection.remoteAddress == "::ffff:78.63.40.199"){
-              return
-          } else {
+          });
               target.socket.emit("kick",{
                   reason:"You got kicked."
-              })
+              });
               target.disconnect()
           }
       }else{
@@ -194,20 +187,14 @@ let userCommands = {
               if(n.guid==data){
                   target = n;
               }
-          })
-          if (target.socket.request.connection.remoteAddress == "::1"){
-              Ban.removeBan(target.socket.request.connection.remoteAddress)
-          } else if (target.socket.request.connection.remoteAddress == "::ffff:127.0.0.1"){
-              Ban.removeBan(target.socket.request.connection.remoteAddress)
-          } else {
-
+          });
               target.socket.emit("ban",{
                   reason:"You got banned."
-              })
+              });
       target.disconnect();
           }
       }else{
-          this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd')
+          this.socket.emit('alert','The user you are trying to kick left. Get dunked on nerd')
       }
   },
   "unban": function(ip) {
