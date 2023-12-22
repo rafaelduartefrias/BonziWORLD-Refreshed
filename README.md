@@ -1,5 +1,5 @@
-# BonziWORLD 2: Remaked (alternatively BonziWORLD 2 Revival/Rewrite)
-The BonziWORLD-Two.ga website has been discontinued because Seamus replaced it with his newer websites. This project is made as the only remake, or it is a rewritten version of BonziWORLD 2 (alternatively BonziWORLD - Third Party Edition).
+# BonziWORLD 2: Remaked (alternatively BonziWORLD 2 Revival/Rewrite/Remake)
+The BonziWORLD-Two.ga website has been discontinued because Seamus replaced it with his newer websites. This project is made as the only remake, or it is a rewritten version of BonziWORLD 2 (alternatively BonziWORLD 2 - Third Party Edition).
 
 Even though there was a BonziWORLD II website with the domain name: 72.23.210.24:3070, that was the website that was **not** archived at the Wayback Machine because it's the rarely-server to not become shitty.
 
@@ -35,3 +35,6 @@ I'm not responsible if you screw up anything with your computer while setting th
 
 ## License
 MIT
+
+## Domains of the original but now-abandoned BonziWORLD 2
+The domains are the following: bonziworld-two.ga, bonziworldrevived.tk and 72.23.210.24.
