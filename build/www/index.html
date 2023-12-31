@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>BonziWORLD 2 - Third Party Edition</title>
 	<meta charset="utf-8" />
 	<meta content="">
-  <meta property="og:type" content="website"><meta property="og:site_name" content="BonziWORLD 2 - Third Party Edition">
-  <meta property="og:keywords" content="BonziWORLD, bonziworld, bwr, BWR, BonziWorld Revived, Bonziworld"><meta data-react-helmet="true" charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+  <meta property="og:type" content="website"><meta property="og:site_name" content="BonziWORLD 2">
+  <meta property="og:keywords" content="BonziWORLD 2, bonziworld-two, BonziWorld 2, BonziWORLD Two, bonziworld two, BonziWORLD, bonziworld, bwr, BWR, BonziWorld Revived, Bonziworld"><meta data-react-helmet="true" charset="utf-8">
   <meta data-react-helmet="true" property="og:title" content="BonziWORLD 2">
   <meta data-react-helmet="true" property="og:description" content="Welcome to BonziWORLD 2! Please don't break the rules in BonziWORLD 2 or else we will kick or ban you. Also, before you start being on BonziWORLD 2, there's a README to look at. This site is for users who must be 13 years old.">
   <meta data-react-helmet="true" name="description" content="Welcome to BonziWORLD 2! Please don't break the rules in BonziWORLD 2 or else we will kick or ban you. Also, before you start being on BonziWORLD 2, there's a README to look at. This site is for users who must be 13 years old.">
@@ -28,9 +30,13 @@
 	<script src="./js/lib/easeljs.min.js"></script>
 	<script src="./js/lib/preloadjs-0.6.2.min.js"></script>
 	<script src="./js/lib/jquery.min.js"></script>
+  <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 	<script src="./js/lib/seedrandom.min.js"></script>
 	<script src="./js/lib/socket.io-1.4.5.js"></script>
+	<script src="./js/lib/speakjs/speakClient.js"></script>
 	<script src="./js/lib/espeak/espeak.js"></script>
+	<script src="./js/lib/espeak/espeak.worker.js"></script>
+  <script src="https://www.youtube.com/player_api"></script>
 	<script src="./js/lib/jquery.contextMenu.min.js"></script>
 
 	<script src="./cordova.js"></script>
@@ -42,6 +48,7 @@
         <script src="https://kit.fontawesome.com/7eb4dccc86.js" crossorigin="anonymous" type="f81c11f4e0b25e3513995e1b-text/javascript"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" /><script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" type="f81c11f4e0b25e3513995e1b-text/javascript"></script>
         <script src="https://www.google.com/recaptcha/api.js" type="f81c11f4e0b25e3513995e1b-text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 	<style id="theme"></style>
@@ -72,7 +79,7 @@
 			<div id="login_card" style="display:none">
 				<input id="login_name" type="text" placeholder="Nickname">
 				<input id="login_room" type="text" placeholder="Room ID (Optional)">
-				<button onclick="login()" style="color: transparent; background-color: transparent; border-color: transparent"><div id="login_go"></div></button>
+				<div id="login_go"></div>
 				<div id="login_error" style="display:none"></div>
 			</div>
 			<div id="login_load">loading</div>
@@ -101,6 +108,7 @@
 				<h1>You got banned!</h1><br>
 				<br>
 				<b>Why? </b><span id="ban_reason"></span><br>
+        You will no longer join Public Rooms.<br>
 				<b>When is it over? </b><span id="ban_end"></span><br>
 			</div>
 		</div>
