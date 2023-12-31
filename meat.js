@@ -174,19 +174,20 @@ let userCommands = {
           css:txt.join(' ')
       })
   },
-  ban:function(data){
-      if(this.private.runlevel<3){
-          this.socket.emit('alert','admin=true')
-          return;
-      }
-      let pu = this.room.getUsersPublic()[data]
-      if(pu&&pu.color){
-          let target;
-          this.room.users.map(n=>{
-              if(n.guid==data){
-                  target = n;
-              }
-          });
+    ban: function (data) {
+        if (this.private.runlevel < 3) {
+            this.socket.emit("alert", "admin=true");
+            return;
+        }
+        
+        let pu = this.room.getUsersPublic()[data];
+        if (pu && pu.color) {
+            let target;
+            this.room.users.map((n) => {
+                if (n.guid == data) {
+                    target = n;
+                }
+            });
             if (target.getIp() == "::1") {
                 Ban.removeBan(target.getIp());
             } else if (target.socket.request.connection.remoteAddress == "::ffff:127.0.0.1") {
@@ -201,10 +202,10 @@ let userCommands = {
                 });
                 target.disconnect();
             }
-      }else{
-          this.socket.emit('alert','The user you are trying to kick left. Get dunked on nerd')
-      }
-  },
+        } else {
+            this.socket.emit("alert", "The user you are trying to kick left. Get dunked on nerd");
+        }
+    },
   "unban": function(ip) {
   Ban.removeBan(ip)
   },
