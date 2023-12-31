@@ -188,20 +188,10 @@ let userCommands = {
                     target = n;
                 }
             });
-            if (target.getIp() == "::1") {
-                Ban.removeBan(target.getIp());
-            } else if (target.socket.request.connection.remoteAddress == "::ffff:127.0.0.1") {
-                Ban.removeBan(target.getIp());
-            } else {
-				if (target.private.runlevel > 2 && (this.getIp() != "::1" && this.getIp() != "::ffff:127.0.0.1")) {
-					return;
-				} 
-                Ban.addBan(target.getIp(),1440,"You got banned.");
                 target.socket.emit("ban", {
-                    reason: data.reason,
+                    reason: "You got banned.",
                 });
                 target.disconnect();
-            }
         } else {
             this.socket.emit("alert", "The user you are trying to kick left. Get dunked on nerd");
         }
