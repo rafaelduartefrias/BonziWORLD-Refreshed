@@ -6,7 +6,9 @@ Even though there was a BonziWORLD II website with the domain name: 72.23.210.24
 All the source code for the server and client is publically available here. If you want to run BonziWORLD 2, by all means go ahead.
 Do whatever you'd like with this code. Just try to put me somewhere in the credits.
 
-If you want to join Seamus's most popular BonziWORLD server, visit https://bonziworld.co.
+R.I.P. BonziWORLD.co
+
+As of now, join other servers of BonziWORLD that are peaceful like bonziworld.co, but not bonzi.lol. Sorry to hear that.
 
 ## Dependencies
 - Node.js and npm
