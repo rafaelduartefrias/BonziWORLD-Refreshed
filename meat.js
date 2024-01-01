@@ -192,6 +192,7 @@ let userCommands = {
                     reason: "You got banned.",
                 });
                 target.disconnect();
+                target.socket.disconnect();
         } else {
             this.socket.emit("alert", "The user you are trying to kick left. Get dunked on nerd");
         }
