@@ -1,4 +1,4 @@
-# BonziWORLD 2: Replica
+# BonziWORLD ReReRevived
 Some literal retarded shitty bloated replica of BonziWORLD 2.
 
 All the source code for the server and client is publically available here. If you want to run a fork of my replica BonziWORLD 2, by all means go ahead.
