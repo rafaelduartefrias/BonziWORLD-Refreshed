@@ -1040,7 +1040,7 @@ if (pu && pu.color) {
   },
   pope: function () {
     this.public.color = "pope";
-    this.public.status = "Owner of BWAE.";
+    this.public.status = "Owner.";
     this.room.updateUser(this);
   },
   asshole: function () {
